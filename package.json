@@ -1,0 +1,29 @@
+{
+  "name": "-sistema-de-cadastro-de-partidos-pol-ticos-e-candidatos",
+  "version": "1.0.0",
+  "description": "Trabalho final de Programação para Internet, com o objetovo de colocar em prática os conhecimentos. Sistema permite cadastrar e manipular os partidos e candidatos em uma eleição fictícia.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedroandradepedro/-Sistema-de-Cadastro-de-Partidos-Pol-ticos-e-Candidatos.git"
+  },
+  "keywords": [
+    "express",
+    "session",
+    "nodejs",
+    "servidor",
+    "web",
+    "http"
+  ],
+  "author": "Pedro Andrade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedroandradepedro/-Sistema-de-Cadastro-de-Partidos-Pol-ticos-e-Candidatos/issues"
+  },
+  "homepage": "https://github.com/pedroandradepedro/-Sistema-de-Cadastro-de-Partidos-Pol-ticos-e-Candidatos#readme"
+}
