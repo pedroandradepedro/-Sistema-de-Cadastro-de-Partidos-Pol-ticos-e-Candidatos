@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav {
+  background: #121212;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.nav-menu a {
+  color: #f9f9f9;
+  padding: 10px 20px;
+}
+
+.nav-menu a:hover {
+  color: yellow;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  padding: 100px 0;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/public/imgs/bandeira.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: brightness(0.2);
+}
+
+.main-infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  color: #f9f9f9;
+}
+
+.main h1 {
+  font-size: 60px;
+  color: yellow;
+}
