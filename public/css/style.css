@@ -137,4 +137,12 @@ a {
 
 .footer {
   background: #121212;
+  display: flex;
+  place-content: center;
+  padding: 50px 0;
+}
+
+.footer p {
+  color: #f9f9f9;
+  font-size: 12px;
 }
