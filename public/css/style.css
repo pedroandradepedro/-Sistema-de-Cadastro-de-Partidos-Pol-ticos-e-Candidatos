@@ -6,6 +6,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  color: #121212;
 }
 
 ul {
@@ -44,7 +45,7 @@ a {
   justify-content: center;
   width: 100%;
   position: relative;
-  padding: 100px 0;
+  padding: 250px 0;
 }
 
 .main::before {
@@ -70,4 +71,55 @@ a {
 .main h1 {
   font-size: 60px;
   color: yellow;
+}
+
+.partidos {
+  display: grid;
+  grid-column: 1fr;
+  justify-content: center;
+  padding: 50px 0;
+  gap: 40px;
+}
+
+.partidos-title {
+  font-size: 32px;
+  color: #121212;
+  text-align: center;
+}
+
+.partidos-disp {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.partidos-ind {
+  display: grid;
+  background: #eeeeee;
+  padding: 20px 35px;
+  border-radius: 20px;
+}
+
+.partidos-ind h3 {
+  font-size: 26px;
+}
+
+.partidos-ind p {
+  font-size: 14px;
+}
+
+.botao {
+  display: inline-block;
+  max-width: max-content;
+  background: #121212;
+  color: #f9f9f9;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.botao:hover {
+  color: yellow;
+  transition: 0.5s;
 }
