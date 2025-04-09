@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Login</title>
+
+</head>
+
+<body class="bg-login">
+
+    <main>
+
+        <div class="login">
+
+            <section class="login-title">
+                <h1>Autenticar</h1>
+            </section>
+
+            <form method="POST" action="/login" class="login-form">
+
+                <div class="login-input">
+                    <label for="usuario">Usuário</label>
+
+                    <input type="text" name="usuario" id="usuario" required class="input-field">
+                </div>
+
+                <div class="login-input">
+                    <label for="senha">Senha</label>
+
+                    <input type="password" name="senha" id="senha" required class="input-field">
+                </div>
+
+                <button type="submit">Login</button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <script src="./script/index.js"></script>
+
+</body>
+
+</html>
