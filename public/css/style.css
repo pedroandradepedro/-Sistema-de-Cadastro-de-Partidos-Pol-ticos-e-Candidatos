@@ -52,7 +52,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/public/imgs/bandeira.jpg");
+  background-image: url("/imgs/bandeira.jpg");
   background-size: cover;
   background-position: center;
   z-index: -1;
