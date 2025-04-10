@@ -1,4 +1,5 @@
 import express from "express";
+import rotaPartido from "./Routes/rotaPartido.js";
 import autenticar from "./secure/autenticar.js";
 import session from "express-session";
 
@@ -21,6 +22,8 @@ app.use(
     },
   })
 );
+
+app.use("/partidos", rotaPartido);
 
 app.get("/login", (requisicao, resposta) => {
   resposta.redirect("/login.html");
@@ -49,16 +52,3 @@ app.use(autenticar, express.static("./private"));
 app.listen(porta, localhost, () => {
   console.log(`O servidor está disponível em http://${localhost}:${porta};`);
 });
-
-// Classe Partido
-
-const partido = new Partido();
-
-partido
-  .gravar()
-  .then(() => {
-    console.log("Partido gravado com sucesso!");
-  })
-  .catch((erro) => {
-    console.log("Erro ao gravar o partido: " + erro);
-  });
