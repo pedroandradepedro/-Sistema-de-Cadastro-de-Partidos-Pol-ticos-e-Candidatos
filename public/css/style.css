@@ -16,6 +16,7 @@
 body {
   font-family: "Poppins", sans-serif;
   color: #121212;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -221,7 +222,7 @@ a {
 }
 
 .login-form button:hover {
-  background: var(--bright-navy-blue);
+  background: green;
 }
 
 /* CADASTRO */
@@ -257,4 +258,24 @@ a {
 .cadastro-partido a:hover {
   color: yellow;
   transition: 0.3s;
+}
+
+/* CADASTRO DE PARTIDO */
+
+.form-title {
+  margin-bottom: 20px;
+}
+
+.bg-login-cadastro {
+  background: var(--white);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.login-input label {
+  font-weight: 600;
 }

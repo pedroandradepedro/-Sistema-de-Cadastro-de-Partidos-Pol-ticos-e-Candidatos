@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Cadastro de Partidos</title>
+
+</head>
+
+<body class="bg-login">
+
+    <div class="login">
+
+        <form method="POST" action="/login" class="login-form">
+
+            <h2 class="form-title">Cadastrar Partido</h2>
+
+            <div class="login-input">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome">
+            </div>
+
+            <div class="login-input">
+                <label for="sigla">Sigla</label>
+                <input type="text" id="sigla" name="sigla">
+            </div>
+
+            <div class="login-input">
+                <label for="codigo">Código</label>
+                <input type="text" id="codigo" name="codigo" placeholder="0000">
+            </div>
+
+            <button class="botao">Cadastrar</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
