@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/pedroandradepedro/-Sistema-de-Cadastro-de-Partidos-Pol-ticos-e-Candidatos#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "express-session": "^1.18.1"
   }
 }
