@@ -19,63 +19,66 @@
 
     <div class="login">
 
-        <form method="POST" action="/login" class="login-form">
+        <form id="formCandidato" method="POST" action="/login" class="login-form">
 
             <h2 class="form-title">Cadastrar Candidato</h2>
 
             <div class="login-input">
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome">
+                <input type="text" id="nome" name="nome" required>
             </div>
 
             <div class="login-input">
                 <label for="cpf">CPF</label>
-                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00">
+                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
             </div>
 
             <div class="login-input">
                 <label for="titulo">Título de Eleitor</label>
-                <input type="text" id="titulo" name="titulo">
+                <input type="text" id="titulo" name="titulo" required>
             </div>
 
             <div class="login-input">
                 <label for="endereco">Endereço</label>
-                <input type="text" id="endereco" name="endereco">
+                <input type="text" id="endereco" name="endereco" required>
             </div>
 
             <div class="login-input">
                 <label for="numero">Número</label>
-                <input type="text" id="numero" name="numero">
+                <input type="text" id="numero" name="numero" required>
             </div>
 
             <div class="login-input">
                 <label for="bairro">Bairro</label>
-                <input type="text" id="bairro" name="bairro">
+                <input type="text" id="bairro" name="bairro" required>
             </div>
 
             <div class="login-input">
                 <label for="cidade">Cidade</label>
-                <input type="text" id="cidade" name="cidade">
+                <input type="text" id="cidade" name="cidade" required>
             </div>
 
             <div class="login-input">
                 <label for="uf">UF</label>
-                <input type="text" id="uf" name="uf">
+                <input type="text" id="uf" name="uf" required>
             </div>
 
             <div class="login-input">
                 <label for="cep">CEP</label>
-                <input type="text" id="cep" name="cep">
+                <input type="text" id="cep" name="cep" required>
             </div>
 
             <div class="login-input">
                 <label for="renda">Renda Mensal</label>
-                <input type="text" id="renda" name="renda" placeholder="R$5999,99">
+                <input type="text" id="renda" name="renda" placeholder="R$5999,99" required>
             </div>
 
 
-
-            <button class="botao">Cadastrar</button>
+            <div>
+                <button class="botao">Cadastrar</button>
+                <button class="botao-att">Atualizar</button>
+                <button class="botao-exc">Excluir</button>
+            </div>
 
         </form>
 
