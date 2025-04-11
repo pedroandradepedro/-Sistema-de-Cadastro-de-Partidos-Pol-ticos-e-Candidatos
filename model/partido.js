@@ -1,15 +1,14 @@
-// import conectar from "../DataBase/conexao.js";
 import PartidoDB from "../DataBase/partidoDB.js";
 
 export default class Partido {
+  #codigo;
   #nome;
   #sigla;
-  #codigo;
 
   constructor(codigo, nome, sigla) {
+    this.#codigo = codigo;
     this.#nome = nome;
     this.#sigla = sigla;
-    this.#codigo = codigo;
   }
 
   set nome(novoNome) {

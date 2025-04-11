@@ -1,26 +1,56 @@
-import Partido from "../model/partido.js";
-export default class PartidoCtrl {
+import Candidato from "../model/candidato.js";
+
+export default class CandidatoCtrl {
   //POST
   gravar(requisicao, resposta) {
     if (requisicao.method === "POST" && requisicao.is("application/json")) {
       const dados = requisicao.body;
-      const codigo = dados.codigo;
+      const cpf = dados.cpf;
+      const titulo = dados.titulo;
       const nome = dados.nome;
-      const sigla = dados.sigla;
-      if (codigo && nome && sigla) {
-        const partido = new Partido(codigo, nome, sigla);
-        partido
+      const endereco = dados.endereco;
+      const numero = dados.numero;
+      const bairro = dados.bairro;
+      const cidade = dados.cidade;
+      const uf = dados.uf;
+      const cep = dados.cep;
+      const renda = dados.renda;
+      if (
+        cpf &&
+        titulo &&
+        nome &&
+        endereco &&
+        numero &&
+        bairro &&
+        cidade &&
+        uf &&
+        cep &&
+        renda
+      ) {
+        const candidato = new Candidato(
+          cpf,
+          titulo,
+          nome,
+          endereco,
+          numero,
+          bairro,
+          cidade,
+          uf,
+          cep,
+          renda
+        );
+        candidato
           .gravar()
           .then(() => {
             resposta.status(201).json({
               status: true,
-              mensagem: "Partido gravado com sucesso!",
+              mensagem: "Candidato gravado com sucesso!",
             });
           })
           .catch((erro) => {
             resposta.status(500).json({
               status: false,
-              mensagem: "Erro ao gravar o partido: " + erro,
+              mensagem: "Erro ao gravar o candidato: " + erro,
             });
           });
       } else {
@@ -44,24 +74,53 @@ export default class PartidoCtrl {
       requisicao.is("application/json")
     ) {
       const dados = requisicao.body;
-      const codigo = dados.codigo;
+      const cpf = dados.cpf;
+      const titulo = dados.titulo;
       const nome = dados.nome;
-      const sigla = dados.sigla;
+      const endereco = dados.endereco;
+      const numero = dados.numero;
+      const bairro = dados.bairro;
+      const cidade = dados.cidade;
+      const uf = dados.uf;
+      const cep = dados.cep;
+      const renda = dados.renda;
 
-      if (codigo && nome && sigla) {
-        const partido = new Partido(codigo, nome, sigla);
-        partido
+      if (
+        cpf &&
+        titulo &&
+        nome &&
+        endereco &&
+        numero &&
+        bairro &&
+        cidade &&
+        uf &&
+        cep &&
+        renda
+      ) {
+        const candidato = new Candidato(
+          cpf,
+          titulo,
+          nome,
+          endereco,
+          numero,
+          bairro,
+          cidade,
+          uf,
+          cep,
+          renda
+        );
+        candidato
           .alterar()
           .then(() => {
             resposta.status(200).json({
               status: true,
-              mensagem: "partido alterado com sucesso!",
+              mensagem: "Candidato alterado com sucesso!",
             });
           })
           .catch((erro) => {
             resposta.status(500).json({
               status: false,
-              mensagem: "Erro ao alterar o partido: " + erro,
+              mensagem: "Erro ao alterar o candidato: " + erro,
             });
           });
       } else {
@@ -82,27 +141,27 @@ export default class PartidoCtrl {
   excluir(requisicao, resposta) {
     if (requisicao.method === "DELETE" && requisicao.is("application/json")) {
       const dados = requisicao.body;
-      const codigo = dados.codigo;
-      if (codigo) {
-        const partido = new Partido(codigo);
-        partido
+      const cpf = dados.cpf;
+      if (cpf) {
+        const candidato = new Candidato(cpf);
+        candidato
           .excluir()
           .then(() => {
             resposta.status(200).json({
               status: true,
-              mensagem: "Partido excluído com sucesso!",
+              mensagem: "Candidato excluído com sucesso!",
             });
           })
           .catch((erro) => {
             resposta.status(500).json({
               status: false,
-              mensagem: "Erro ao excluir o partido: " + erro,
+              mensagem: "Erro ao excluir o candidato: " + erro,
             });
           });
       } else {
         resposta.status(400).json({
           status: false,
-          mensagem: "Informe o código do partido a ser excluído!",
+          mensagem: "Informe o CPF do candidato a ser excluído!",
         });
       }
     } else {
@@ -116,19 +175,19 @@ export default class PartidoCtrl {
   //GET
   consultar(requisicao, resposta) {
     if (requisicao.method === "GET") {
-      const partido = new Partido();
-      partido
+      const candidato = new Candidato();
+      candidato
         .consultar()
-        .then((listaPartidos) => {
+        .then((listaCandidatos) => {
           resposta.status(200).json({
             status: true,
-            partidos: listaPartidos,
+            candidatos: listaCandidatos,
           });
         })
         .catch((erro) => {
           resposta.status(500).json({
             status: false,
-            mensagem: "Erro ao consultar os partidos: " + erro,
+            mensagem: "Erro ao consultar os candidatos: " + erro,
           });
         });
     } else {

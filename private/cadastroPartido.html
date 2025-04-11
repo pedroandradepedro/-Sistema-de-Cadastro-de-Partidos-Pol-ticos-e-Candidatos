@@ -2,52 +2,62 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./css/style.css">
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Cadastro de Partidos</title>
-
 </head>
 
-<body class="bg-login">
-
-    <div class="login">
-
-        <form id="formPartido" method="POST" action="/login" class="login-form">
-
-            <h2 class="form-title">Cadastrar Partido</h2>
-
-            <div class="login-input">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" required>
+<body>
+    <br />
+    <div class="container w-60 border p-5">
+        <h1>Cadastro de Partidos</h1>
+        <form id="formPartido" method="POST" action="#" class="row g-3 needs-validation" novalidate>
+            <div class="col-md-4">
+                <label for="codigo" class="form-label">Código:</label>
+                <input type="text" class="form-control" id="codigo" name="codigo" value="" required>
+                <div class="invalid-feedback">
+                    Por favor, informe o codigo!
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="nome" class="form-label">Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome" value="" required>
+                <div class="invalid-feedback">
+                    Por favor, informe a nome!
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="sigla" class="form-label">Sigla:</label>
+                <input type="text" class="form-control" id="sigla" name="sigla" value="" required>
+                <div class="invalid-feedback">
+                    Por favor, informe o Código!
+                </div>
             </div>
 
-            <div class="login-input">
-                <label for="sigla">Sigla</label>
-                <input type="text" id="sigla" name="sigla" required>
+            <div class="col-12">
+                <button class="btn btn-primary" id="cadastrar" type="submit">Cadastrar</button>
+                <button class="btn btn-warning" id="atualizar" type="button" disabled>Atualizar</button>
+                <button class="btn btn-danger" id='excluir' type="button" disabled>Excluir</button>
+                <button class="btn btn-secondary" type="button" onclick="history.back()">Voltar</button>
             </div>
-
-            <div class="login-input">
-                <label for="codigo">Código</label>
-                <input type="text" id="codigo" name="codigo" placeholder="0000" required>
-            </div>
-
-            <div>
-                <button class="botao">Cadastrar</button>
-                <button class="botao-att">Atualizar</button>
-                <button class="botao-exc">Excluir</button>
-            </div>
-
         </form>
+        <div id="mensagem">
 
+        </div>
+        </br>
+        <div id="espacoTabela">
+
+        </div>
     </div>
 
+
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+<script src="./script/partido.js"></script>
 
 </html>

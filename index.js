@@ -1,16 +1,17 @@
 import express from "express";
 import rotaPartido from "./Routes/rotaPartido.js";
+import rotaCandidato from "./Routes/rotaCandidato.js";
 import autenticar from "./secure/autenticar.js";
 import session from "express-session";
 
-import Partido from "./model/partido.js";
-
-const porta = 3000;
 const localhost = "0.0.0.0";
+const porta = 3000;
 
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
+
+app.use(express.json());
 
 app.use(
   session({
@@ -24,13 +25,9 @@ app.use(
 );
 
 app.use("/partidos", rotaPartido);
+app.use("/candidatos", rotaCandidato);
 
 app.get("/login", (requisicao, resposta) => {
-  resposta.redirect("/login.html");
-});
-
-app.get("/logout", (requisicao, resposta) => {
-  requisicao.session.destroy();
   resposta.redirect("/login.html");
 });
 
@@ -43,6 +40,11 @@ app.post("/login", (requisicao, resposta) => {
   } else {
     resposta.redirect("login.html");
   }
+});
+
+app.get("/logout", (requisicao, resposta) => {
+  requisicao.session.destroy();
+  resposta.redirect("/login.html");
 });
 
 app.use(express.static("./public"));
